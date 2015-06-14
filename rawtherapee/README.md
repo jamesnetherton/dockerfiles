@@ -1,6 +1,6 @@
 # Docker Rawtherapee
 
-Docker image for [http://rawtherapee.com/](Rawtherapee).
+Docker image for [Rawtherapee](http://rawtherapee.com/).
 
 ## Starting a Rawtherapee container
 
