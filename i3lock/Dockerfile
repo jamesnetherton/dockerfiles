@@ -10,4 +10,3 @@ RUN apt-get update && \
     git clone https://github.com/Lixxia/i3lock.git && \
     cd i3lock && \
     make 
-#apt-get update && apt-get install pkg-config libxcd libxcd-util libpam-dev libcairo-dev libxcd-xinerama libev libx11-dev libx11-xcb-dev libxkbfile-dev libxkbcommon libxkbcommon-x11
