@@ -6,7 +6,7 @@
 
 ## Prerequisites
 
-If you want to do anything useful with this image, you'll Amiga Kickstart ROMs. The FS-UAE site [explains this in more detail](http://fs-uae.net/kickstarts).  
+If you want to do anything useful with this image, you'll need Amiga Kickstart ROMs. The FS-UAE site [explains this in more detail](http://fs-uae.net/kickstarts).  
 
 ## Starting a FS-UAE container
 
@@ -14,7 +14,7 @@ If you want to do anything useful with this image, you'll Amiga Kickstart ROMs. 
 docker run -it \
    -e DISPLAY=$DISPLAY \
    -v /tmp/.X11-unix:/tmp/.X11-unix \
-   -v $HOME/.config/fs-uae/:/home/fsuae/config
+   -v $HOME/.config/fs-uae/:/home/fsuae/config \
    --device /dev/dri/card0 \
    --device /dev/snd \
    --name fs-uae \
@@ -24,6 +24,8 @@ docker run -it \
 The default `ENTRYPOINT` is `fs-uae --base-dir=/home/fsuae/config` which enables you to mount and share a configuration volume.
 
 Using the example above, when a container is launched for the first time it will populate $HOME/.config/fs-uae with directories where you can store your FS-UAE configuration, Kickstart ROMs, games etc.
+
+> NOTE: To release mouse & keyboard capture press `F12 + G` or click the middle mouse button (or wheel).
 
 ## FS-UAE configuration
 
@@ -37,7 +39,7 @@ You can create [FS-UAE configuration files](http://fs-uae.net/configuration-file
 
 Note the above prerequisites around Kickstarts.
 
-Once you have obtained Kickstart ROMs you can copy them into `$HOME/.config/fs-uae/Kickstarts`
+Once you have obtained Kickstart ROMs you can copy them into `$HOME/.config/fs-uae/Kickstarts`.
 
 ### Games
 
@@ -47,28 +49,28 @@ Alternatively there is the option of using [hard drives](http://fs-uae.net/using
 
 ### Overriding configuration options
 
-All [options](http://fs-uae.net/options) within the configuration file can be overriden using command line flags. For example.
+All [options](http://fs-uae.net/options) within the configuration file can be overridden using command line flags. For example.
 
-** Load a floppy image **
+**Load a floppy image**
 
 ```
 docker run -it \
    -e DISPLAY=$DISPLAY \
    -v /tmp/.X11-unix:/tmp/.X11-unix \
-   -v $HOME/.config/fs-uae/:/home/fsuae/config
+   -v $HOME/.config/fs-uae/:/home/fsuae/config \
    --device /dev/dri/card0 \
    --device /dev/snd \
    --name fs-uae \
    jamesnetherton/fs-uae --floppy-drive-0=CannonFodder1.adf
 ```
 
-** Run full screen **
+**Run full screen**
 
 ```
 docker run -it \
    -e DISPLAY=$DISPLAY \
    -v /tmp/.X11-unix:/tmp/.X11-unix \
-   -v $HOME/.config/fs-uae/:/home/fsuae/config
+   -v $HOME/.config/fs-uae/:/home/fsuae/config \
    --device /dev/dri/card0 \
    --device /dev/snd \
    --name fs-uae \
