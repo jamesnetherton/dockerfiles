@@ -2,7 +2,7 @@ FROM debian:jessie
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
-    apt-get install --no-install-recommends -y
+    apt-get install --no-install-recommends -y \
       wine \
       wine32 \
       cabextract \
