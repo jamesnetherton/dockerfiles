@@ -1,6 +1,6 @@
 # Docker Wine
 
-A minimal image for [Wine](https://www.winehq.org/). It is intended that this
+An image for [Wine](https://www.winehq.org/). It is intended that this
 image is extended to Dockerize wine compatible applications.
 
 Since the `ENTRYPOINT` is sent to /usr/bin/wine, child images need only supply a `CMD`
