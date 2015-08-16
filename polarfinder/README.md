@@ -1,6 +1,6 @@
 # Docker Polar Finder
 
-Polar Finder on Linux with Docker with Wine. Helps identify where Polaris will be at a given, latitude, longitude, date and time.
+Polar Finder on Linux with Docker and Wine. Helps identify where Polaris will be at a given, latitude, longitude, date and time.
 
 
 ## Starting a Polar Finder container
