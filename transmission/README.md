@@ -11,6 +11,6 @@ docker run -it \
    -v ${HOME}/Downloads:/downloads \
    -v ${HOME}/.local:/home/transmission/.local 
    -v ${HOME}/.config:/home/transmission/.config 
-   -v ${HOME}/.cache:/home//transmission/.cache
+   -v ${HOME}/.cache:/home/transmission/.cache
    jamesnetherton/transmission
 ```
