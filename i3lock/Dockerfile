@@ -7,6 +7,7 @@ RUN apt-get update && \
                     libxcb* \
                     libxkbcommon* \
                     libev-dev && \
+    apt-get clean && \
     git clone https://github.com/Lixxia/i3lock.git && \
     cd i3lock && \
-    make 
+    make

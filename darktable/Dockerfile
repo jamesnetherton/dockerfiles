@@ -5,6 +5,7 @@ RUN apt-get update && \
       darktable \
       libgl1-mesa-dri \
       libgl1-mesa-glx \
-      x11-xserver-utils
+      x11-xserver-utils && \
+    apt-get clean
 
 ENTRYPOINT [ "darktable" ]
