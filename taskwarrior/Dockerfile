@@ -1,5 +1,5 @@
-FROM alpine:3.2
+FROM alpine
 
-RUN apk add --update task
+RUN apk add --no-cache --update task
 
 ENTRYPOINT [ "task" ]

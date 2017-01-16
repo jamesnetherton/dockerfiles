@@ -1,6 +1,5 @@
-FROM alpine:3.2
+FROM alpine
 
-RUN apk add --update gimp ghostscript-fonts dbus-x11 
+RUN apk add --no-cache --update gimp ghostscript-fonts dbus-x11
 
 ENTRYPOINT [ "gimp" ]
-

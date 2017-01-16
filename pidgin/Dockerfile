@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM alpine
 
-RUN apk add --update pidgin ghostscript-fonts && \
+RUN apk add --no-cache --update pidgin ghostscript-fonts && \
     adduser -h /home/pidgin -u 1000 -D pidgin
 
 USER pidgin

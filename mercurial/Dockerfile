@@ -1,6 +1,5 @@
-FROM alpine:3.2
+FROM alpine
 
-RUN apk add --update mercurial
+RUN apk add --no-cache --update mercurial
 
 ENTRYPOINT [ "hg" ]
-

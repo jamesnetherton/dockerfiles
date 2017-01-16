@@ -1,6 +1,6 @@
-FROM alpine:3.2
+FROM alpine
 
-RUN apk add --update xchat ghostscript-fonts dbus-x11 && \
+RUN apk add --no-cache --update xchat ghostscript-fonts dbus-x11 && \
     adduser -h /home/xchat -u 1000 -D xchat
 
 USER xchat

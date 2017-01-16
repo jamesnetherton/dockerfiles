@@ -1,6 +1,5 @@
-FROM alpine:3.2
+FROM alpine
 
-RUN apk add --update ruby ruby-dev musl-dev gcc make
+RUN apk add --no-cache --update ca-certificates ruby ruby-dev musl-dev gcc make
 
 CMD [ "irb" ]
-
