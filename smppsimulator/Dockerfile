@@ -5,7 +5,7 @@ ADD SMPPSim.zip /tmp/SMPPSim.zip
 RUN apk add --no-cache --update openjdk8-jre unzip && \
     unzip /tmp/SMPPSim.zip -d / && \
     chmod +x /SMPPSim/*.sh && \
-    echo -e "\nSYSTEM_IDS=smppuser\nPASSWORDS=smppassword" >> /SMPPSim/conf/smppsim.props && \
+    echo -e "\nSYSTEM_IDS=smppuser\nPASSWORDS=password" >> /SMPPSim/conf/smppsim.props && \
     rm -f /tmp/SMPPSim.zip
 
 EXPOSE 88
