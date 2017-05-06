@@ -1,16 +1,26 @@
 FROM resin/rpi-raspbian
 
-ENV VERSION_TAG v4.0.9
-ENV CC=gcc-4.7
+ENV TVHEADEND_VERSION 4.2.1
 
 RUN apt-get update && \
-    apt-get install -y python gettext libtext-iconv-perl ca-certificates git libssl-dev pkg-config build-essential dvb-apps gcc-4.7 libavcodec-dev wget && \
+    apt-get install -y \
+      debhelper \
+      build-essential:native \
+      cmake \
+      dvb-apps \
+      git \
+      libavahi-client-dev \
+      liburiparser-dev \
+      libssl-dev \
+      python \
+      zlib1g-dev \
+      wget && \
     apt-get clean && \
-    git clone https://github.com/tvheadend/tvheadend.git && \
+    git clone -b v${TVHEADEND_VERSION} https://github.com/tvheadend/tvheadend.git && \
     cd tvheadend && \
-    git checkout ${VERSION_TAG} && \
-    ./configure; make; make install && \
-    rm -rf ~/tvheadend
+    AUTOBUILD_CONFIGURE_EXTRA=--disable-bintray_cache\ --disable-hdhomerun_static\ --disable-ffmpeg_static\ --disable-dvbscan ./Autobuild.sh && \
+    dpkg -i ../tvheadend_${TVHEADEND_VERSION}_armhf.deb && \
+    rm -rf ~/*.deb ~/tvheadend
 
 EXPOSE 9981 9982
 ENTRYPOINT ["tvheadend"]
