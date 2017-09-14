@@ -2,7 +2,7 @@
 
 [Amiga](https://en.wikipedia.org/wiki/Amiga) emulation with [FS-UAE](http://fs-uae.net/) running under Docker.
 
-![Alt text](../assets/a600.jpg)
+![FS-UAE](../assets/a600.jpg)
 
 ## Prerequisites
 
