@@ -1,8 +1,8 @@
 FROM alpine
 
-ENV MAVEN_VERSION=3.5.0 \
+ENV MAVEN_VERSION=3.5.2 \
     JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk \
-    MAVEN_HOME=/usr/share/apache-maven-3.5.0
+    MAVEN_HOME=/usr/share/apache-maven-3.5.2
 
 RUN apk update && \
     apk add --no-cache \ 
