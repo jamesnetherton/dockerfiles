@@ -1,6 +1,6 @@
 FROM resin/rpi-raspbian
 
-ENV TVHEADEND_VERSION 4.2.4
+ENV TVHEADEND_VERSION 4.2.5
 
 RUN apt-get update && \
     apt-get install -y \
