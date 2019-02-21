@@ -9,6 +9,7 @@ RUN apk update && \
         curl \         
         git \
         ncurses \
+        nodejs \
         openjdk8 \
         shadow \
         wget \ 
