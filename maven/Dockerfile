@@ -1,6 +1,6 @@
 FROM jamesnetherton/java
 
-ENV MAVEN_VERSION 3.5.2
+ENV MAVEN_VERSION 3.6.1
 ENV PATH /usr/share/apache-maven-${MAVEN_VERSION}/bin:${PATH}
 
 RUN apk --update add curl && \
