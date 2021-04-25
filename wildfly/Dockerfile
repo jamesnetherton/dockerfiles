@@ -6,7 +6,7 @@
 FROM jboss/base-jdk:11
 
 # Set the WILDFLY_VERSION env variable
-ENV WILDFLY_VERSION 20.0.1.Final
+ENV WILDFLY_VERSION 23.0.1.Final
 ENV JBOSS_HOME /opt/jboss/wildfly
 
 USER root
